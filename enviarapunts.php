@@ -18,7 +18,7 @@ if (array_key_exists('userfile', $_FILES)) {
     $mail->Port       = 587;
     $mail->Host       = "smtp.gmail.com";
     $mail->Username   = "timy05popovici@gmail.com";
-    $mail->Password   = "wbvzgbiebvbktmpk";
+    $mail->Password   = "";
 
     $mail->IsHTML(true);
     $mail->AddAddress("timy2017popovici@gmail.com", "Timy");
