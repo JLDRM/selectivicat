@@ -1,10 +1,11 @@
 <?php
 // Declarem variables de connexió
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'db';
- // Establim la connexió i la comprovem
+$host = 'remotemysql.com';
+$user = 'jX1XcN7rHJ';
+$pass = 'heD060vRVV';
+$db = 'jX1XcN7rHJ';
+ 
+// Establim la connexió i la comprovem
 $con = new mysqli($host,$user,$pass,$db);
 if(!$con){
     echo 'to mal';
