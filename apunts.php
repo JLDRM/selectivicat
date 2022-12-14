@@ -7,16 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-<?php include('header.php')?>
-    <h1>Curso de PHP</h1>
+<?php include('privateHeader.php')?>
+<div class="container-flex px-3 pt-2">
+    <div class="jumbotron text-white m-3 p-3 ">
+        <h1 class="mx-5">Apunts</h1>
+        <?php
+        if (isset($_POST['submittecno'])) {
+            include('apunts/tecnoapunts.html');
+        }
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quam, provident dicta sed sequi 
-        sunt illo quaerat tenetur vero repudiandae cupiditate molestiae quisquam dolores, accusantium cumque 
-        voluptatem laborum? Ut, dignissimos?
+        if (isset($_POST['submitcientific'])) {
+            include('apunts/cientificapunts.html');
+        }
 
-    </p>
+        if (isset($_POST['submitsocial'])) {
+            include('apunts/socialapunts.html');
+        }
 
-    <p><a href="areaprivada.php"> <-Curso de java</a></p>
+        if (isset($_POST['submithumanistic'])) {
+            include('apunts/humanisticapunts.html');
+        }
+
+        if (isset($_POST['submitartistic'])) {
+            include('apunts/artisticapunts.html');
+        }
+
+        if (isset($_POST['submitllengues'])) {
+            include('apunts/llenguesapunts.html');
+        }
+
+        if (isset($_POST['submithistoria'])) {
+            include('apunts/historiaapunts.html');
+        }
+    ?>
+    </div>
+</div>
+<style>
+.jumbotron {
+    background: #6666ff;
+    border-radius: 7px;
+}
+
+.body{
+    background: #66b3ff;
+}
+</style>
+
 
 </body>
 </html>

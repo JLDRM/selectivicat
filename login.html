@@ -11,26 +11,26 @@
 <body class="body">
     <div class="container px-2">
         <a href="index.html" id="return" class="btn mt-5 mb-2">
-           <img src="img/backicon.png" alt="back icon" width="30" height="30" class="img-responsive">
+            <img src="img/backicon.png" alt="back icon" width="30" height="30" class="img-responsive">
         </a>
     </div>
     <div class="container mb-5 text-white">
         <div class=" form row" id="formulario">
             <div id="inicisessio" class="col py-3 mx-2">
                 <h1 class="mt-3 px-2 mx-5">Iniciar sessió</h1>
-                <form  action="inicisessio.php" id="formdata" method="post" class="was-validated">
+                <form  action="startSession.php" id="formdata" method="post" class="was-validated">
                     <div class="mx-2 row">
                         <div class="col">
                             <div class="mb-3 mt-3 px-2 mx-5">
-                                <label for="Usernameinici" class="formlabel">Username</label>
+                                <label for="Usernameinici" class="formlabel">Nom d'usuari</label>
                                 <input type="text" id="Usernameinici" class="form-control" pattern="[a-zA-Z0-9]+" placeholder="Nom usuari" name='Usernameinici' required="required">
                             </div>
                             <div class="mb-3 px-2 mx-5">
-                                <label for="Emailinici" class="formlabel">Email</label>
-                                <input type="email" id="Emailinici" class="form-control" placeholder="Correu electrónic" name='Emailinici' required="required">
+                                <label for="Emailinici" class="formlabel">Correu electrònic</label>
+                                <input type="email" id="Emailinici" class="form-control" placeholder="Correu electrònic" name='Emailinici' required="required">
                             </div>
                             <div class="mb-3 px-2 mx-5">
-                                <label for="Passwordinici" class="formlabel">Password</label>
+                                <label for="Passwordinici" class="formlabel">Contrasenya</label>
                                 <input type="password" id="Passwordinici" class="form-control" placeholder="Contrasenya" name='Passwordinici' required="required">
                             </div>
                             <div class="mb-3 px-2 mx-5 my-5">
@@ -47,19 +47,19 @@
                     <div class="mx-2 row">
                         <div class="col ">
                             <div class="mb-3 mt-3 px-2 mx-5">
-                                <label for="Username" class="fromlabel">Username</label>
+                                <label for="Username" class="fromlabel">Nom d'usuari</label>
                                 <input type="text" id="Username" class="form-control" placeholder="Nom d'usuari" name='Username' required="required">
                             </div>
                             <div class="mb-3 px-2 mx-5">
-                                <label for="Email" class="formlabel">Email</label>
-                                <input type="email" id="Email" class="form-control" placeholder="Correu electrónic" name='Email' required="required">
+                                <label for="Email" class="formlabel">Correu electrònic</label>
+                                <input type="email" id="Email" class="form-control" placeholder="Correu electrònic" name='Email' required="required">
                             </div>
                             <div class="mb-3 px-2 mx-5">
-                                <label for="Password" class="formlabel">Password</label>
+                                <label for="Password" class="formlabel">Contrasenya</label>
                                 <input type="password" id="Password" class="form-control" placeholder="Contrasenya" name='Password' required="required">
                             </div>
                             <div class="mb-3 px-2 mx-5 my-5">
-                                <button type="submit" name='submit' id="submit" class="btn btn-primay w-100 text-white">Crear</button>
+                                <button type="submit" name='submit' id="submit" class="btn btn-primay w-100 text-white">Crear compte</button>
                             </div>
                         </div>        
                     </div>
@@ -76,17 +76,17 @@
     }
 
     #inicisessio{
-        background: #626462;
+        background: #6666ff;
         border-radius: 7px;
     }
     
     .crear{
-        background: #424241;
+        background: #202060;
         border-radius: 7px;
     }
 
     .body {
-        background: #d0d3cf
+        background: #66b3ff
     }
 
     .form {
@@ -94,11 +94,9 @@
     }
 
     .btn {
-        background: #494c50;
-        border-color: #494c50;
+        background: #6666ff;
+        border-color: #336699;
         color: #fff;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
     }
 </style>
-
-<!-- 2d293a -->

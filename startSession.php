@@ -31,11 +31,11 @@ if (isset($_POST['submitinici'])) {
 
         $_SESSION['Emailinici'] = $iniciemail;
 
-        header("location: areaprivada.php");
+        header("location: private.php");
     } else {
         include("login.html");
         if($error){
-            echo "<div class='alert alert-danger'><strong>Error!</strong> Usuari o contrasenya incorrectes</div>";
+            echo "<div class='alert alert-danger'><strong>Error!</strong> Usuari o contrasenya incorrectes.</div>";
         }
     }
 }
@@ -47,11 +47,3 @@ if (isset($_POST['submitinici'])) {
         margin-right: 8.2%;
     }
 </style>
-
-<!-- echo "<div class='container p-5 my-5 text-white'><p class = 'error'>-Error, el usuario o la contraseña son incorrectos, escribelos de nuevo, por favor.</p></div>"; -->
-
-<!-- <div class='alert alert-warning alert-dismissible fade show' role='alert'>
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-              <span aria-hidden='true'>&times;</span>
-            </button></div> -->

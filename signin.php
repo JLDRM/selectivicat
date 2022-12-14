@@ -7,7 +7,7 @@ $db = 'db';
  // Establim la connexió i la comprovem
 $con = new mysqli($host,$user,$pass,$db);
 if(!$con){
-    echo 'to mal';
+    echo "No s'ha pogut connectar a la base de dades";
 }
 // Declarem variables que venen del form
 $username = $_POST['Username'] ;
@@ -20,7 +20,8 @@ if (isset($_POST['submit'])) {
     $resultado = mysqli_query($con,$sql);
  
     if (mysqli_num_rows($resultado)>0)   {
-        echo 'Ja tens una compta creada';
+        include("login.html");
+        echo "<div class='alert alert-danger'><strong>Error!</strong> Ja tens una compta creada.</div>";
     } else {
         $insertvalue = "INSERT INTO `userss` (`Username`, `Email`, `Password`) VALUES ('$username','$email','$pass')";
         $retryvalue = mysqli_query($con, $insertvalue);
@@ -28,22 +29,16 @@ if (isset($_POST['submit'])) {
         if (!$resultado) {
             die('Error: ' . mysqli_error());
         }
- 
-        echo 'Acabes de crear la compta';
-    }
-}
 
-
-// Funció eliminar dades
-if (isset($_POST['delsubmit'])) {
-    $stmt = "DELETE FROM `users` WHERE (`Username`, `Email`, `Password`) = ('$username','$email','$pass')";
-    $insert = mysqli_query($con, $stmt);
-
-    if (!$insert) {
-        echo 'problema en eliminació de dades' ;
-    }
-    else{
-        echo 'dades eliminades de la base de dades' ;
+        include("login.html");
+        echo "<div class='alert alert-success'> S'ha creat la compta!</div>";
     }
 }
 ?>
+
+<style>
+    .alert{
+        margin-left: 8.2%;
+        margin-right: 8.2%;
+    }
+</style>

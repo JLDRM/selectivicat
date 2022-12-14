@@ -26,7 +26,7 @@ if (array_key_exists('userfile', $_FILES)) {
     $mail->AddCC("timy2017popovici@gmail.com", "cc-recipient-name");
     $mail->Subject = "Provaa";
 
-    $textarea = $_POST['textarea'];
+    $textarea = $_POST['option'];
 
     $mail->Body = "<html><h2><b>$textarea</b></h2></html>";
 
